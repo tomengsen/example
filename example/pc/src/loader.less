@@ -1,0 +1,113 @@
+.loader {
+	width: 11em;
+	height: 11em;
+	// background: yellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -5.5em;
+	// 倾斜
+	transform: rotate(45deg);
+	// 定义为元素
+	&:after,
+	&:before {
+		position: absolute;
+		height: 11em;
+		width: 11em;
+		content: '';
+		display: block;
+		top: 50%;
+		left: 50%;
+		border-radius: 0.5em;
+		// margin: -50%;
+		// 使用css3移动元素
+		transform: translate(-50%, -50%);
+	}
+	&:after {
+		height: 1em;
+		// background: orange;
+		// box-shadow: 0 3em green, 0 -3em purple;
+		// // 第三帧
+		// width: 1em;
+		// box-shadow: 5em 3em green, -5em -3em purple;
+		// // 第二帧
+		// width: 11em;
+		// box-shadow: 0 3em green, 0 -3em purple;
+		// // 第一帧
+		// width: 1em;
+		// box-shadow: -5em 3em green, 5em -3em purple;
+		animation: move-after 2s infinite;
+	}
+	&:before {
+		width: 1em;
+		// background: red;
+		// box-shadow: 3em 0 skyblue, -3em 0 yellowgreen; 
+		// // 第三帧
+		// height: 1em;
+		// box-shadow: 3em -5em skyblue, -3em 5em yellowgreen; 
+		// // 第二帧
+		// height: 11em;
+		// box-shadow: 3em 0 skyblue, -3em 0 yellowgreen; 
+		// // 第一帧
+		// height: 1em;
+		// box-shadow: 3em 5em skyblue, -3em -5em yellowgreen; 
+		animation: move-before 2s infinite;
+	}
+}
+.loader-text {
+	position: absolute;
+	width: 50em;
+	top: 50%;
+	left: 50%;
+	margin: -6.5em -25em;
+	font-size: 20px;
+	text-align: center;
+	span {
+		font-weight: bold;
+	}
+}
+// 动画
+@keyframes move-after {
+	0% {
+		// 第一帧
+		width: 1em;
+		box-shadow: -5em 3em #f4a7c4, 5em -3em #c9f0fc;
+	}
+	35% {
+		// 第二帧
+		width: 11em;
+		box-shadow: 0 3em #f4a7c4, 0 -3em #c9f0fc;
+	}
+	70% {
+		// 第三帧
+		width: 1em;
+		box-shadow: 5em 3em #f4a7c4, -5em -3em #c9f0fc;
+	}
+	100% {
+		// 第一帧
+		width: 1em;
+		box-shadow: -5em 3em #f4a7c4, 5em -3em #c9f0fc;
+	}
+}
+@keyframes move-before {
+	0% {
+		// 第一帧
+		height: 1em;
+		box-shadow: 3em 5em #f7dfac, -3em -5em #b3e5d5; 
+	}
+	35% {
+		// 第二帧
+		height: 11em;
+		box-shadow: 3em 0 #f7dfac, -3em 0 #b3e5d5; 
+	}
+	70% {
+		// 第三帧
+		height: 1em;
+		box-shadow: 3em -5em #f7dfac, -3em 5em #b3e5d5; 
+	}
+	100% {
+		// 第一帧
+		height: 1em;
+		box-shadow: 3em 5em #f7dfac, -3em -5em #b3e5d5; 
+	}
+}

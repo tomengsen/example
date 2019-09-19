@@ -1,0 +1,78 @@
+.app-card {
+	width: 212px;
+	border-radius: 10px;
+	overflow: hidden;
+	.image-container {
+		width: 212px;
+		height: 119.25px;
+		overflow: hidden;
+		position: relative;
+		img {
+			position: absolute;
+			width: 212px;
+			height: 119.25px;
+			top: 0;
+			left: 0;
+			transition: all 400ms;
+		}
+	}
+	.card-content {
+		background: #fff;
+		padding: 15px 10px;
+		position: relative;
+		.ellipsis {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		h2 {
+			.ellipsis;
+			font-size: 16px;
+			margin-top: 5px;
+		}
+		span {
+			.ellipsis;
+		}
+		p {
+			font-size: 12px;
+			display: flex;
+			margin-bottom: 5px;
+		}
+		.card-price {
+			color: #f30;
+			margin-right: 4px;
+		}
+		.card-sales {
+			flex: 1;
+		}
+		.card-layer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.6);
+			text-align: center;
+			padding-top: 20px;
+			opacity: 0;
+			transition: opacity 400ms;
+			.has-buy {
+				cursor: not-allowed;
+				background-color: #efefef;
+				color: #666;
+			}
+		}
+	}
+	// 鼠标移入动画
+	&:hover {
+		.card-layer {
+			opacity: 1;
+		}
+		img {
+			top: -20px;
+			left: -20px;
+			width: 252px;
+			height: 159.25px;
+		}
+	}
+}

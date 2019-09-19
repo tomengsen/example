@@ -1,0 +1,90 @@
+@color: #337ab7;
+.app-buy {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+	.buy-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 600px;
+		margin: -150px -300px; 
+		background: #fff;
+	}
+	.buy-header {
+		background: @color;
+		height: 30px;
+		line-height: 30px;
+		color: #fff;
+		padding: 0 20px;
+		.buy-close {
+			float: right;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+	.buy-body {
+		padding: 40px 20px 20px;
+		img {
+			height: 84.375px;
+			width: 150px;
+			float: left;
+		}
+		// .lesson {
+		// 	padding-top: 5px;
+		// }
+		h2 {
+			margin-top: 0px;
+			font-size: 20px;
+			padding-top: 10px;
+			line-height: 30px;
+		}
+		.intro {
+			margin-left: 170px;
+			p {
+				font-size: 16px;
+			}
+		}
+		.price {
+			clear: both;
+			padding-top: 30px;
+			font-size: 16px;
+			.price-num {
+				color: #f30;
+				margin-left: 10px;
+				font-size: 30px;
+			}
+		}
+	}
+	.buy-footer {
+		padding: 10px 20px;
+		font-size: 14px;
+		.btns {
+			border: 1px solid #ccc;
+			color: #333;
+			font-size: 14px;
+			padding: 4px 12px;
+			display: inline-block;
+			float: right;
+			border-radius: 3px;
+			margin-bottom: 10px;
+			position: relative;
+			top: -4px;
+			cursor: pointer;
+		}
+		.btn-sure {
+			background: @color;
+			color: #fff;
+			margin-right: 20px;
+		}
+		input {
+			position: relative;
+			top: 2px;
+			margin-right: 6px;
+		}
+	}
+}

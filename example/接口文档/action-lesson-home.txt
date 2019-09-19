@@ -1,0 +1,26 @@
+获取首页最近添加的数据
+请求路径：/action/lesson/home
+请求方式：GET
+数据类型：application/json
+编码类型：
+
+请求携带的数据
+    query       query数据
+        num         请求课程的数量
+    data        如果是post请求，可以携带data数据
+        type        课程类型
+
+返回的数据
+    {
+        errno:      数据返回的状态，0表示成功
+        msg:        返回的信息说明
+        data:array[]    返回的数据
+            {       每个成员是一个对象
+                img:string      课程图片地址
+                title:string    课程标题
+                sales:number    课程销量
+                price:string    课程价格
+                type:string     课程分类
+                _id:string      课程id
+            }
+    }
